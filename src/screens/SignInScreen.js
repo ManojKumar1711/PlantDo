@@ -4,6 +4,8 @@ import Logo from '../../assets/images/Logo_1.png';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 import {ScrollView} from 'react-native';
+import SocialSignInButtons from '../components/SocialSignInButtons';
+
 const SignInScreen = () => {
   const {height} = useWindowDimensions();
   const [username, setUsername] = useState('');
@@ -14,10 +16,6 @@ const SignInScreen = () => {
 
   const onFpPressed = () => {
     console.warn('Forgot Password');
-  };
-
-  const onGoogle = () => {
-    console.warn('Signed in with Google');
   };
 
   const onCreateAccount = () => {
@@ -49,12 +47,7 @@ const SignInScreen = () => {
           text="Forgot Password?"
           type="TERTIARY"
         />
-        <CustomButton
-          onPress={onGoogle}
-          text="Continue with Google"
-          bgColor="#E7EAF4"
-          fgColor="#DD4D44"
-        />
+        <SocialSignInButtons />
         <CustomButton
           onPress={onCreateAccount}
           text="New user? Click here to create an account"
