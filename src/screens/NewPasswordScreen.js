@@ -2,15 +2,17 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 //import SocialSignInButtons from '../components/SocialSignInButtons';
 const NewPaswordScreen = () => {
   const [confirmCode, setConfirmCode] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const navigation = useNavigation();
   const onSubmitPressed = () => {
-    console.warn('onSubmitPressed');
+    navigation.navigate('Home');
   };
   const onSignInPressed = () => {
-    console.warn('onSignInPressed');
+    navigation.navigate('Sign In');
   };
 
   return (

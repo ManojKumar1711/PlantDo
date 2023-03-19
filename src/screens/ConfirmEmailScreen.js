@@ -2,19 +2,20 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
-import SocialSignInButtons from '../components/SocialSignInButtons';
+import {useNavigation} from '@react-navigation/native';
 const ConfirmEmailScreen = () => {
-  const [code,setCode] = useState('');
-  const onConfirmPressed = () =>{
-    console.warn('onConfirmPressed');
+  const [code, setCode] = useState('');
+  const navigation = useNavigation();
+  const onConfirmPressed = () => {
+    navigation.navigate('Home');
   };
-  const onSignInPressed = () =>{
-    console.warn('onSignInPressed');
+  const onSignInPressed = () => {
+    navigation.navigate('Sign In');
   };
 
-  const onResendPressed = () =>{
+  const onResendPressed = () => {
     console.warn('onResendPressed');
-  }
+  };
   return (
     <ScrollView>
       <View style={styles.root}>
@@ -39,7 +40,6 @@ const ConfirmEmailScreen = () => {
           text="Back To Sign In"
           type="TERTIARY"
         />
-
       </View>
     </ScrollView>
   );

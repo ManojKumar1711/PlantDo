@@ -1,25 +1,27 @@
 import React, {useState} from 'react';
-import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native';
+import {View, Image, StyleSheet, useWindowDimensions} from 'react-native';
 import Logo from '../../assets/images/Logo_1.png';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 import {ScrollView} from 'react-native';
 import SocialSignInButtons from '../components/SocialSignInButtons';
+import { useNavigation } from "@react-navigation/native";
 
 const SignInScreen = () => {
   const {height} = useWindowDimensions();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigation = useNavigation();
   const onSignInPresses = () => {
-    console.warn('Sign In');
+    navigation.navigate('Home');
   };
 
   const onFpPressed = () => {
-    console.warn('Forgot Password');
+    navigation.navigate('Forgot Password');
   };
 
   const onCreateAccount = () => {
-    console.warn('Click here to create an account');
+    navigation.navigate('Sign Up');
   };
 
   return (
