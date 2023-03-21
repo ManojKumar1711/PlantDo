@@ -94,12 +94,16 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     namespace "com.plantdo"
+
     defaultConfig {
         applicationId "com.plantdo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy 'react-native-camera','general'
+        multiDexEnabled true
+
     }
 
     splits {

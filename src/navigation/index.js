@@ -5,7 +5,9 @@ import SignUpScreen from '../screens/SignUpScreen';
 import ConfirmEmailScreen from '../screens/ConfirmEmailScreen';
 import ConfirmPasswordScreen from '../screens/ConfirmPasswordScreen';
 import NewPasswordScreen from '../screens/NewPasswordScreen';
-import Home from '../screens/Home';
+import HomeScreen from '../screens/HomeScreen';
+import Camera from '../screens/Camera';
+import UploadImage from "../screens/UploadImage";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -22,7 +24,9 @@ const Navigation = () => {
           component={ConfirmPasswordScreen}
         />
         <Stack.Screen name={'New Password'} component={NewPasswordScreen} />
-        <Stack.Screen name={'Home'} component={Home} />
+        <Stack.Screen name={'Home'} component={HomeScreen} />
+        <Stack.Screen name={'Camera'} component={Camera} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {SafeAreaView, StyleSheet} from 'react-native';
 import Navigation from './src/navigation';
 const App = () => {
